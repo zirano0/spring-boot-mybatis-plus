@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/study_boot
+    password: rootZira
+    username: root
+
+logging:
+  level:
+    com.zira: debug  #指定日志在那些包的代码中
+
