@@ -1,0 +1,55 @@
+
+
+// 判断当前key是否存在
+
+redisTemplate.hasKey(key);
+
+
+
+// 读取所有
+
+redisTemplate.opsForList();
+
+// 写入缓存
+opsForList.leftPushAll(key, list)
+
+
+
+// 读取缓存
+
+redisTemplate.opsForValue().get(key);
+
+
+
+// 写入缓存 （修改，新增）
+
+redisTemplate.opsForValue().set(key, value);
+
+
+
+// 更新缓存 (没有就添加，有就修改)
+
+redisTemplate.opsForValue.getAndSet(key, value);
+
+
+
+// 删除缓存
+
+redisTemplate.delete(key);
+
+
+
+// 设置过期时间   key相同就可以
+
+ ①DAYS：天
+
+ ②HOURS：小时
+
+ ③MINUTES：分钟
+
+ ④SECONDS：秒
+
+ ⑤MILLISECONDS：毫秒
+
+redisTemplate.opsForValue().set(key,value,30,TimeUnit.SECONDS);
+
